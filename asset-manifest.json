@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/music-generation-project/static/css/main.073c9b0a.css",
+    "main.js": "/music-generation-project/static/js/main.ece569b4.js",
+    "static/js/787.99f3bedb.chunk.js": "/music-generation-project/static/js/787.99f3bedb.chunk.js",
+    "static/media/logo.svg": "/music-generation-project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/music-generation-project/index.html",
+    "main.073c9b0a.css.map": "/music-generation-project/static/css/main.073c9b0a.css.map",
+    "main.ece569b4.js.map": "/music-generation-project/static/js/main.ece569b4.js.map",
+    "787.99f3bedb.chunk.js.map": "/music-generation-project/static/js/787.99f3bedb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.ece569b4.js"
+  ]
+}
