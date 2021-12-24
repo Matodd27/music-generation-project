@@ -11,10 +11,14 @@ function Section(props) {
     return (
         <div className="section">
             <div className="title">
+                {/* Take the title from props */}
                 <h1>{props.title}</h1>
             </div>
             <div className="step">
-                <p>step viewer</p>
+                {/* Check whether section needs a step view */}
+                {props.step === true &&
+                    <p>step</p>
+                }
             </div>
             <div className="options">
                 <ul>
