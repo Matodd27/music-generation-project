@@ -1,3 +1,5 @@
+import "./Section.css";
+
 function Section(props) {
 
     // Gets the options for the given instrument and makes an array of list items
