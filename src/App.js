@@ -1,7 +1,9 @@
 import './App.css';
 import Section from "./Components/Section/Section.js"
+import Model from "./tfjs/model.js"
 
 function App() {
+    Model()
     return (
         <div className="App">
             <header className="App-header">
