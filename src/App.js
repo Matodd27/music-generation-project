@@ -1,9 +1,9 @@
 import './App.css';
 import Section from "./Components/Section/Section.js"
-import Model from "./tfjs/model.js"
+import GenerateMelody from "./tfjs/Methods/GenerateMelody.js"
 
 function App() {
-    Model()
+    GenerateMelody(20)
     return (
         <div className="App">
             <header className="App-header">
