@@ -1,6 +1,7 @@
 import './App.css';
 import Section from "./Components/Section/Section.js"
-import GenerateMelody from "./tfjs/Methods/GenerateMelody.js"
+import GenerateMelody from "./GenerateMelody/Methods/GenerateMelody.js"
+import ConvertMelody from './GenerateMelody/Methods/ConvertMelody';
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
                     <Section title="Bass" options={["volume"]} step={true}></Section>
                     <Section title="Background Noise" options={["volume", "type"]} step={false}></Section>
                     <Section title="Master Settings" options={["volume", "BPM", "New Melody", "Reset"]} step={false}></Section>
-                    <button onClick={() => GenerateMelody(10)}>New Melody</button>
+                    <button onClick={() => ConvertMelody(GenerateMelody(2))}>New Melody</button>
                 </div>
             </header>
         </div>

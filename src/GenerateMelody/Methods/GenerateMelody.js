@@ -33,7 +33,7 @@ async function GenerateMelody(length) {
         pattern.push([index / 391.0])
         pattern = pattern.slice(1)
     }
-    console.log(melody)
+    return melody
 }
 
 export default GenerateMelody;
