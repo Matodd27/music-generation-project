@@ -1,6 +1,7 @@
 import * as tf from "@tensorflow/tfjs"
 import ModelConnect from "./ModelConnect.js"
 import ModelPredict from "./ModelPredict.js"
+import ConvertMelody from "./ConvertMelody.js"
 
 async function GenerateMelody(length) {
     let melody = []
@@ -33,6 +34,7 @@ async function GenerateMelody(length) {
         pattern.push([index / 391.0])
         pattern = pattern.slice(1)
     }
+    melody = await ConvertMelody(melody)
     return melody
 }
 
