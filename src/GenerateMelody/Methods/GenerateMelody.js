@@ -15,8 +15,12 @@ async function GenerateMelody(length) {
     const model = await ModelConnect()
 
     let output_array = []
+
+    // Get a random seed for the network
+    const seed = Math.floor(Math.random() * network_input.length)
+    
     // Divide each element in the pattern by the number unique notes in the input
-    let pattern = network_input[0].map(x => [x[0] / 391.0])
+    let pattern = network_input[seed].map(x => [x[0] / 391.0])
     let patternTensor
     let index = 0
     let result = ""
@@ -35,6 +39,7 @@ async function GenerateMelody(length) {
         pattern = pattern.slice(1)
     }
     melody = await ConvertMelody(melody)
+    console.log(melody)
     return melody
 }
 

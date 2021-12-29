@@ -3,7 +3,18 @@ import Section from "./Components/Section/Section.js"
 import GenerateMelody from "./GenerateMelody/Methods/GenerateMelody.js"
 import PlayMelody from './PlayMelody/PlayMelody';
 
+import { useState } from "react"
+
+
+
 function App() {
+    const [melody, setMelody] = useState()
+
+    async function NewMelodyHandler() {
+        const generatedMelody = await GenerateMelody(10)
+        setMelody(generatedMelody);
+    }
+
     return (
         <div className="App">
             <header className="App-header">
@@ -14,8 +25,8 @@ function App() {
                     <Section title="Bass" options={["volume"]} step={true}></Section>
                     <Section title="Background Noise" options={["volume", "type"]} step={false}></Section>
                     <Section title="Master Settings" options={["volume", "BPM", "New Melody", "Reset"]} step={false}></Section>
-                    <button onClick={() => GenerateMelody(2)}>New Melody</button>
-                    <button onClick={() => PlayMelody(["C4", "A4"])}>Play Melody</button>
+                    <button onClick={NewMelodyHandler}>New Melody</button>
+                    <button onClick={() => PlayMelody(melody)}>Play Melody</button>
                 </div>
             </header>
         </div>
