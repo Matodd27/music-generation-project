@@ -1,13 +1,6 @@
 import "./Section.css";
 
 function Section(props) {
-
-    // Gets the options for the given instrument and makes an array of list items
-    let optionsList = []
-    props.options.forEach((option, index) => {
-        optionsList.push(<li key={index}>{option}</li>)
-    })
-
     return (
         <div className="section">
             <div className="title">
@@ -16,14 +9,16 @@ function Section(props) {
             </div>
             <div className="step">
                 {/* Check whether section needs a step view */}
-                {props.step === true &&
+                {props.step === true ?
                     <p>step</p>
-                }
+                : null}
             </div>
             <div className="options">
                 <ul>
                     {/* Display the list of options */}
-                    {optionsList}
+                    {props.options.forEach((option, index) => {
+                        optionsList.push(<li key={index}>{option}</li>)
+                    })}
                 </ul>
             </div>
         </div>
