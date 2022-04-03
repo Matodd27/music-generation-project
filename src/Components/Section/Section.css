@@ -14,3 +14,15 @@
     font-size: 2vw;
     margin: 1vh;
 }
+
+@media (max-width: 599px) {
+    .section {
+        width: 40vw;
+        height: 20vh;
+    }
+    
+    .section h1 {
+        font-size: 3vw;
+        margin: 1vh;
+    }  
+}

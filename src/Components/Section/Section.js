@@ -14,12 +14,7 @@ function Section(props) {
                 : null}
             </div>
             <div className="options">
-                <ul>
-                    {/* Display the list of options */}
-                    {props.options.forEach((option, index) => {
-                        optionsList.push(<li key={index}>{option}</li>)
-                    })}
-                </ul>
+
             </div>
         </div>
     )
