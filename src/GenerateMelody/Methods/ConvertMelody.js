@@ -15,19 +15,15 @@ async function ConvertMelody(melody) {
                 new_note = new m.note.Note(parseInt(note))
                 chord.push(new_note)
             })
+            // Convert each note in the chord into the right form
+            chord = chord.map(x => x.nameWithOctave)
             output_melody.push(chord)
         } else {    
-            // Create a music21 object for the note
-            new_note = new m.note.Note(pattern)
-            output_melody.push([new_note])
+            // Add the note in its own array into the output_melody array
+            output_melody.push([pattern])
         }
     });
-
-    // For each note or chord convert it from a music21 object into the name of the notes contained within
-    for (let i = 0; i < output_melody.length; i++) {
-        output_melody[i] = output_melody[i].map(x => x.nameWithOctave)
-    }
-    
+   
     return output_melody
 }
 

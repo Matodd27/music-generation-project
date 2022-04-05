@@ -39,7 +39,6 @@ async function GenerateMelody(length) {
         pattern = pattern.slice(1)
     }
     melody = await ConvertMelody(melody)
-    console.log(melody)
     return melody
 }
 

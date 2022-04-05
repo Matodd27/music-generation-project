@@ -13,6 +13,7 @@ function App() {
     async function NewMelodyHandler() {
         const generatedMelody = await GenerateMelody(10)
         setMelody(generatedMelody);
+        console.log(generatedMelody)
     }
 
     return (
