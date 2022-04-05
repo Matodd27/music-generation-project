@@ -1,7 +1,6 @@
 import * as m from "music21j"
 
 async function ConvertMelody(melody) {
-    melody = await melody
     let new_note
     let chord
     let output_melody = []
@@ -13,10 +12,10 @@ async function ConvertMelody(melody) {
             // Split the chord up and create a music21 object for each note
             pattern.split(".").forEach(note => {
                 new_note = new m.note.Note(parseInt(note))
-                chord.push(new_note)
+                // Convert each note into the correct form and push it to the array
+                chord.push(new_note.nameWithOctave)
             })
-            // Convert each note in the chord into the right form
-            chord = chord.map(x => x.nameWithOctave)
+            // Add the chord into the output array
             output_melody.push(chord)
         } else {    
             // Add the note in its own array into the output_melody array
