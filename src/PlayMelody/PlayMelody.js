@@ -4,15 +4,16 @@ import * as Tone from "tone"
 function PlayMelody(melody) {
     const synth = new Tone.PolySynth(Tone.Synth).toDestination()
 
-    let time = 0
-    let interval = 0.5
-    for (let i = 0; i < 10; i++) {
-        melody.forEach(chord => {
-            synth.triggerAttackRelease(chord, "8n", time)
-            time += interval
-        })
-    }
-    
+    let index = 0
+    const loop = new Tone.Loop(time => {
+        console.log(melody[index])
+        synth.triggerAttackRelease(melody[index], "8n", time)
+        index += 1
+        if (index >= melody.length) {
+            index = 0
+        }
+    }, "4n").start(0)
+
     Tone.Transport.start()
 }
 
