@@ -2,26 +2,31 @@
     "latenight": {
         "file": "LateNight_95_G.wav",
         "BPM": 95,
-        "key": "G"
+        "key": "G",
+        "progression": ["C", "D", "E", "B"]
     },
     "legato": {
         "file": "Legato-70-E.wav",
         "BPM": 70,
-        "key": "E"
+        "key": "E",
+        "progression": ["A", "A-", "F#", "A"]
     },
     "softvintage": {
         "file": "SoftVintage-83-D#.wav",
         "BPM": 83,
-        "key": "D#"
+        "key": "D#",
+        "progression": ["A-", "E-", "F", "F"]
     },
     "summertime": {
         "file": "Summertime-118-A#.wav",
         "BPM": 118,
-        "key": "A#"
+        "key": "A#",
+        "progression": ["G", "C", "F", "C"]
     },
     "vibraphone": {
         "file": "Vibraphone_140_B-.wav",
         "BPM": 140,
-        "key": "B-"
+        "key": "B-",
+        "progression": ["B-", "B-", "A", "E-"]
     }
 }
