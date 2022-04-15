@@ -13,7 +13,6 @@ function PlayMelody(melody) {
             index = 0
         }
     }, "4n").start(0)
-
     Tone.Transport.start()
 }
 
