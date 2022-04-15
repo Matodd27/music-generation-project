@@ -1,7 +1,14 @@
 import "./Section.css";
+import DropdownButton from "react-bootstrap/DropdownButton"
 import Dropdown from "react-bootstrap/Dropdown"
 
 function Section(props) {
+
+    
+    // const DropdownHandler = (chordSample) => {
+
+    // }
+
     return (
         <div className="section">
             <div className="title">
@@ -14,19 +21,17 @@ function Section(props) {
                     <p>step</p>
                 : null}
             </div>
-            <div className="options">
-                <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        Dropdown Button
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-            </div>
+            {(props.title === "Chords") ?
+                <div className="options">
+                    <DropdownButton onSelect={props.onSampleSelect} variant="secondary" id="dropdown-variants-secondary" key="secondary" menuVariant="dark" title="Chords">
+                        <Dropdown.Item eventKey="latenight">Late Night</Dropdown.Item>
+                        <Dropdown.Item eventKey="legato">Legato</Dropdown.Item>
+                        <Dropdown.Item eventKey="softvintage">Soft Vintage</Dropdown.Item>
+                        <Dropdown.Item eventKey="summertime">Summertime</Dropdown.Item>
+                        <Dropdown.Item eventKey="vibraphone">Vibraphone</Dropdown.Item>
+                    </DropdownButton>
+                </div>
+            : null}
         </div>
     )
 }

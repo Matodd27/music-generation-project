@@ -10,6 +10,10 @@ import { useState } from "react"
 
 function App() {
     const [melody, setMelody] = useState()
+    const [currentChordSample, setCurrentChordSample] = useState()
+    const [currentChordBPM, setCurrentChordBPM] = useState()
+    const [currentChordKey, setCurrentChordKey] = useState()
+    const ChordData = require("./Chord Samples/Metadata.json")
 
     async function NewMelodyHandler() {
         const generatedMelody = await GenerateMelody(10)
@@ -17,12 +21,18 @@ function App() {
         console.log(generatedMelody)
     }
 
+    const ChordSampleSelect = (chosenSample) => {
+        setCurrentChordSample(ChordData[chosenSample].file)
+        setCurrentChordBPM(ChordData[chosenSample].BPM)
+        setCurrentChordKey(ChordData[chosenSample].key)
+    }
+
     return (
         <div className="App">
             <header className="App-header">
                 <div className="Sections-container">
                     <Section title="Melody" step={true}></Section>
-                    <Section title="Chords" step={true}></Section>
+                    <Section onSampleSelect={(chosenSample) => ChordSampleSelect(chosenSample)} title="Chords" step={true}></Section>
                     <Section title="Drums" step={true}></Section>
                     <Section title="Bass" step={true}></Section>
                     <Section title="Background Noise" step={false}></Section>

@@ -1,0 +1,27 @@
+{
+    "latenight": {
+        "file": "LateNight_95_G.wav",
+        "BPM": 95,
+        "key": "G"
+    },
+    "legato": {
+        "file": "Legato-70-E.wav",
+        "BPM": 70,
+        "key": "E"
+    },
+    "softvintage": {
+        "file": "SoftVintage-83-D#.wav",
+        "BPM": 83,
+        "key": "D#"
+    },
+    "summertime": {
+        "file": "Summertime-118-A#.wav",
+        "BPM": 118,
+        "key": "A#"
+    },
+    "vibraphone": {
+        "file": "Vibraphone_140_B-.wav",
+        "BPM": 140,
+        "key": "B-"
+    }
+}
